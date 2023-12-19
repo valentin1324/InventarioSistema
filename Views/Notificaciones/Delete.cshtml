@@ -1,0 +1,17 @@
+﻿@model Notificacion
+
+<h2>Eliminar Notificación</h2>
+<h3>¿Estás seguro de que deseas eliminar esta notificación?</h3>
+<div>
+    <p><strong>Producto:</strong> @Model.Producto.Nombre</p>
+    <p><strong>Mensaje:</strong> @Model.Mensaje</p>
+    <p><strong>Fecha de Notificación:</strong> @Model.FechaNotificacion.ToString("g")</p>
+    <p><strong>Atendida:</strong> @(Model.Atendida ? "Sí" : "No")</p>
+</div>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(model => model.NotificacionId)
+    <input type="submit" value="Eliminar" class="btn btn-danger" />
+    <a href="@Url.Action("Index")" class="btn btn-default">Cancelar</a>
+}

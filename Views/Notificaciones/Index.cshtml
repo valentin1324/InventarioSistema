@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Notificacion>
+@{
+    Layout = "_Layout";
+}
+
+<h2>Notificaciones</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Producto</th>
+            <th>Mensaje</th>
+            <th>Fecha Notificación</th>
+            <th>Atendida</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var notificacion in Model)
+        {
+            <tr>
+                <td>@notificacion.Producto.Nombre</td>
+                <td>@notificacion.Mensaje</td>
+                <td>@notificacion.FechaNotificacion.ToString("dd/MM/yyyy")</td>
+                <td>@(notificacion.Atendida ? "Sí" : "No")</td>
+                <td>
+                    <a href="@Url.Action("Edit", new { id = notificacion.NotificacionId })">Editar</a> |
+                    <a href="@Url.Action("Delete", new { id = notificacion.NotificacionId })">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

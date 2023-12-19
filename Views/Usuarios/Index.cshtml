@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Usuario>
+
+<h2>Usuarios</h2>
+<a href="@Url.Action("Create")">Crear Nuevo Usuario</a>
+<table class="table">
+    <tr>
+        <th>Nombre</th>
+        <th>Email</th>
+        <th>Rol</th>
+        <th>Acciones</th>
+    </tr>
+    @foreach (var usuario in Model)
+    {
+        <tr>
+            <td>@usuario.Nombre</td>
+            <td>@usuario.Email</td>
+            <td>@usuario.Rol</td>
+            <td>
+                <a href="@Url.Action("Edit", new { id = usuario.UsuarioId })">Editar</a> |
+                <a href="@Url.Action("Delete", new { id = usuario.UsuarioId })">Eliminar</a>
+            </td>
+        </tr>
+    }
+</table>

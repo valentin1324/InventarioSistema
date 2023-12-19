@@ -1,0 +1,16 @@
+﻿@model Venta
+
+<h2>Eliminar Venta</h2>
+<h3>¿Estás seguro de que deseas eliminar esta venta?</h3>
+<div>
+    <p>Fecha de Venta: @Model.FechaVenta.ToString("dd/MM/yyyy")</p>
+    <p>Producto: @Model.Producto.Nombre</p>
+    <p>Cantidad: @Model.Cantidad</p>
+    <p>Precio Total: @Model.PrecioTotal.ToString("C")</p>
+    <p>Vendedor: @Model.Vendedor.Nombre</p>
+</div>
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.VentaId)
+    <input type="submit" value="Eliminar" />
+}

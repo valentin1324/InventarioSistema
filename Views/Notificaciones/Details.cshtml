@@ -1,0 +1,37 @@
+﻿@model Notificacion
+
+<h2>Detalles de Notificación</h2>
+<div>
+    <h4>Notificación</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Producto
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Producto.Nombre
+        </dd>
+        <dt class="col-sm-2">
+            Mensaje
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Mensaje
+        </dd>
+        <dt class="col-sm-2">
+            Fecha de Notificación
+        </dt>
+        <dd class="col-sm-10">
+            @Model.FechaNotificacion.ToString("g")
+        </dd>
+        <dt class="col-sm-2">
+            Atendida
+        </dt>
+        <dd class="col-sm-10">
+            @(Model.Atendida ? "Sí" : "No")
+        </dd>
+    </dl>
+</div>
+<div>
+    <a href="@Url.Action("Edit", new { id = Model.NotificacionId })">Editar</a> |
+    <a href="@Url.Action("Index")">Volver a la lista</a>
+</div>

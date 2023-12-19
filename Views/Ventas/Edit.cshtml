@@ -1,0 +1,30 @@
+﻿@model Venta
+
+<h2>Editar Venta</h2>
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.VentaId)
+    <div>
+        <label>Fecha Venta</label>
+        @Html.EditorFor(model => model.FechaVenta, new { htmlAttributes = new { @type = "date" } })
+    </div>
+    <div>
+        <label>Producto</label>
+        @Html.DropDownListFor(model => model.ProductoId, new SelectList(ViewBag.Productos, "Value", "Text"), new { @disabled = "disabled" })
+    </div>
+    <div>
+        <label>Cantidad</label>
+        @Html.EditorFor(model => model.Cantidad)
+    </div>
+    <div>
+        <label>Precio Total</label>
+        @Html.EditorFor(model => model.PrecioTotal)
+    </div>
+    <div>
+        <label>Vendedor</label>
+        @Html.DropDownListFor(model => model.VendedorId, new SelectList(ViewBag.Vendedores, "Value", "Text"))
+    </div>
+    <div>
+        <input type="submit" value="Guardar Cambios" />
+    </div>
+}

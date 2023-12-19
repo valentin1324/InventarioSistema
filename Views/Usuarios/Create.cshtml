@@ -1,0 +1,25 @@
+﻿@model Usuario
+
+<h2>Crear Usuario</h2>
+@using (Html.BeginForm())
+{
+    <div>
+        <label>Nombre</label>
+        @Html.EditorFor(model => model.Nombre)
+    </div>
+    <div>
+        <label>Email</label>
+        @Html.EditorFor(model => model.Email)
+    </div>
+    <div>
+        <label>Rol</label>
+        @Html.EditorFor(model => model.Rol)
+    </div>
+    <div>
+        <label>Password</label>
+        @Html.EditorFor(model => model.PasswordHash)
+    </div>
+    <div>
+        <input type="submit" value="Crear" />
+    </div>
+}

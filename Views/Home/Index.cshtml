@@ -1,0 +1,217 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@{
+    Layout = "_Layout";
+}
+
+    <div class="ONE" id="texto-welcom">
+        <style type="text/css">
+            .vienvenida {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            h1 {
+                Color: black;
+                font-size: 35px;
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .fotos1 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                margin-top: 150px;
+                background-color: rgba(0, 0, 0, 0.09);
+                height: auto;
+            }
+
+            .parrafoconfoto1 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 50%;
+                margin: 50px;
+                font-size: 25px;
+                color: black;
+            }
+
+            .imagenconparrafo1 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 50%;
+            }
+
+                .imagenconparrafo1 img {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                }
+
+            .foto2contexto {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                margin-top: 250px;
+            }
+
+                .foto2contexto .foto2 {
+                    width: 98%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                    .foto2contexto .foto2 img {
+                        width: 100%;
+                    }
+
+
+
+            .Formulario {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                margin-top: 150px;
+            }
+
+                .Formulario .form-label {
+                    margin: 20px;
+                }
+
+
+
+            .mb-3 {
+                width: 80%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: auto;
+            }
+
+            .formulario2 {
+                width: 90%;
+                background-color: rgba(0, 0, 0, 0.068);
+                border-radius: 50px;
+                height: auto;
+                padding-bottom: 20px;
+                margin-bottom: 150px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            .contenedor {
+                margin-top: 200px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+            }
+
+            .contenedor2 {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 90%;
+            }
+
+            .imagenesx1 {
+                width: 30%;
+            }
+
+                .imagenesx1 img {
+                    width: 100%;
+                }
+
+        </style>
+        <div class="vienvenida">
+            <h1>Sistema de Inventario </h1>
+        </div>
+
+        <br>
+
+
+
+
+        <div class="fotos1">
+            <div class="parrafoconfoto1">
+                <p>
+                    Somos una empresa con mas de 20 años de experiencia en el area de la logistica, en especifico
+                    inventarios ya que sabemos que gran parte de las empresas tienen perdida y un descontrol en el
+                    inventario y al momento de buscar lago no lo encuentran al momento de las ventas o ay descuadre para
+                    ello gestionamos un proceso de inventario con mucho control en los puntos importantes
+                </p>
+            </div>
+            <div class="imagenconparrafo1">
+                <img src="https://www.microtech.es/hubfs/Fotos%20blog/inventario.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="contenedor">
+            <!-- AQUI el cual equivale al 100% -->
+            <div class="contenedor2">
+                <!-- aqui va el porcentaje -->
+                <div class="imagenesx1">
+                    <img src="https://principia.es/wp-content/uploads/2019/09/rapidez.png" alt="">
+                </div>
+                <div class="imagenesx1">
+                    <img src="https://grupocuatrosrl.com/wp-content/uploads/2021/08/confiabilidad.jpg" alt="">
+                </div>
+                <div class="imagenesx1">
+                    <img src="https://www.tesicnor.com/wp-content/uploads/2021/04/Cyber-seguridad-1-bc.jpg" alt="">
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+
+        <div class="foto2contexto">
+            <div class="foto2">
+                <img src="https://blog.bind.com.mx/hs-fs/hubfs/Blog/software%20para%20inventarios%20-199715-edited.png?width=1600&name=software%20para%20inventarios%20-199715-edited.png"
+                     alt="">
+            </div>
+        </div>
+
+        <div class="Formulario">
+            <div class="formulario2">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Correo contacto</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                           placeholder="name@example.com">
+                </div>
+                <br>
+                <br>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Telefono</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="955749034">
+                </div>
+                <br>
+                <br>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Descripcion</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>

@@ -1,0 +1,14 @@
+﻿@model Usuario
+
+<h2>Eliminar Usuario</h2>
+<h3>¿Estás seguro de que quieres eliminar este usuario?</h3>
+<div>
+    <h4>@Model.Nombre</h4>
+    <p>@Model.Email</p>
+    <p>@Model.Rol</p>
+</div>
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.UsuarioId)
+    <input type="submit" value="Eliminar" />
+}

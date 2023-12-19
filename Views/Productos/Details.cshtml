@@ -1,0 +1,27 @@
+﻿@model Producto
+
+<h2>Detalles de Producto</h2>
+<div>
+    <h4>@Model.Nombre</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">Código</dt>
+        <dd class="col-sm-10">@Model.Codigo</dd>
+        <dt class="col-sm-2">Fecha Vencimiento</dt>
+        <dd class="col-sm-10">@Model.FechaVencimiento.ToString("dd/MM/yyyy")</dd>
+        <dt class="col-sm-2">Ubicación</dt>
+        <dd class="col-sm-10">@Model.Ubicacion</dd>
+        <dt class="col-sm-2">Costo</dt>
+        <dd class="col-sm-10">@Model.Costo</dd>
+        <dt class="col-sm-2">Precio Venta</dt>
+        <dd class="col-sm-10">@Model.PrecioVenta</dd>
+        <dt class="col-sm-2">Stock</dt>
+        <dd class="col-sm-10">@Model.Stock</dd>
+        <dt class="col-sm-2">Proveedor</dt>
+        <dd class="col-sm-10">@Model.Proveedor</dd>
+        <dt class="col-sm-2">Categoría</dt>
+        <dd class="col-sm-10">@Model.Categoria</dd>
+    </dl>
+</div>
+<a href="@Url.Action("Edit", new { id = Model.ProductoId })">Editar</a> |
+<a href="@Url.Action("Index")">Volver a la lista</a>

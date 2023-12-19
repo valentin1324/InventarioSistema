@@ -1,0 +1,31 @@
+﻿@model Usuario
+
+<h2>Detalles de Usuario</h2>
+<div>
+    <h4>Usuario</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Nombre
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Nombre
+        </dd>
+        <dt class="col-sm-2">
+            Email
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Email
+        </dd>
+        <dt class="col-sm-2">
+            Rol
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Rol
+        </dd>
+    </dl>
+</div>
+<div>
+    <a href="@Url.Action("Edit", new { id = Model.UsuarioId })">Editar</a> |
+    <a href="@Url.Action("Index")">Volver a la lista</a>
+</div>

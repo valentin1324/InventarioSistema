@@ -1,0 +1,26 @@
+﻿@model Notificacion
+
+<h2>Editar Notificación</h2>
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.NotificacionId)
+    <div>
+        <label>Producto</label>
+        @Html.DropDownListFor(model => model.ProductoId, new SelectList(ViewBag.Productos, "Value", "Text"))
+    </div>
+    <div>
+        <label>Mensaje</label>
+        @Html.EditorFor(model => model.Mensaje)
+    </div>
+    <div>
+        <label>Fecha Notificación</label>
+        @Html.EditorFor(model => model.FechaNotificacion, new { htmlAttributes = new { @type = "date" } })
+    </div>
+    <div>
+        <label>Atendida</label>
+        @Html.CheckBoxFor(model => model.Atendida)
+    </div>
+    <div>
+        <input type="submit" value="Guardar Cambios" />
+    </div>
+}

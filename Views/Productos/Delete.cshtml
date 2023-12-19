@@ -1,0 +1,22 @@
+﻿@model Producto
+
+<h2>Eliminar Producto</h2>
+<h3>¿Estás seguro de que deseas eliminar este producto?</h3>
+<div>
+    <p><strong>Nombre:</strong> @Model.Nombre</p>
+    <p><strong>Código:</strong> @Model.Codigo</p>
+    <p><strong>Fecha Vencimiento:</strong> @Model.FechaVencimiento.ToString("dd/MM/yyyy")</p>
+    <p><strong>Ubicación:</strong> @Model.Ubicacion</p>
+    <p><strong>Costo:</strong> @Model.Costo.ToString("C")</p>
+    <p><strong>Precio Venta:</strong> @Model.PrecioVenta.ToString("C")</p>
+    <p><strong>Stock:</strong> @Model.Stock</p>
+    <p><strong>Proveedor:</strong> @Model.Proveedor</p>
+    <p><strong>Categoría:</strong> @Model.Categoria</p>
+</div>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(model => model.ProductoId)
+    <input type="submit" value="Eliminar" class="btn btn-danger" />
+    <a href="@Url.Action("Index")" class="btn btn-default">Cancelar</a>
+}

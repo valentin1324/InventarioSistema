@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Venta>
+
+<h2>Ventas</h2>
+<a href="@Url.Action("Create")">Registrar Nueva Venta</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Fecha Venta</th>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Precio Total</th>
+            <th>Vendedor</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var venta in Model)
+        {
+            <tr>
+                <td>@venta.FechaVenta.ToString("dd/MM/yyyy")</td>
+                <td>@venta.Producto.Nombre</td>
+                <td>@venta.Cantidad</td>
+                <td>@venta.PrecioTotal.ToString("C")</td>
+                <td>@venta.Vendedor</td>
+                <td>
+                    <a href="@Url.Action("Edit", new { id = venta.VentaId })">Editar</a> |
+                    <a href="@Url.Action("Details", new { id = venta.VentaId })">Detalles</a> |
+                    <a href="@Url.Action("Delete", new { id = venta.VentaId })">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
